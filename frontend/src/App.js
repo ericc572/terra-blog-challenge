@@ -12,7 +12,8 @@ import * as query from './contract/query'
 import { ConnectWallet } from './components/ConnectWallet'
 
 function App() {
-  const [count, setCount] = useState(null)
+  // const [count, setCount] = useState(null)
+  const [post, setPost] = useState("")
   const [updating, setUpdating] = useState(true)
   const [resetValue, setResetValue] = useState(0)
 
@@ -23,17 +24,17 @@ function App() {
   useEffect(() => {
     const prefetch = async () => {
       if (connectedWallet) {
-        setCount((await query.getCount(connectedWallet)).count)
+        // setPost((await query.getCount(connectedWallet)).count)
       }
       setUpdating(false)
     }
     prefetch()
   }, [connectedWallet])
 
-  const onClickIncrement = async () => {
+  const onClickPost = async () => {
     setUpdating(true)
     await execute.increment(connectedWallet)
-    setCount((await query.getCount(connectedWallet)).count)
+    setPost((await query.getCount(connectedWallet)).count)
     setUpdating(false)
   }
 
@@ -41,7 +42,7 @@ function App() {
     setUpdating(true)
     console.log(resetValue)
     await execute.reset(connectedWallet, resetValue)
-    setCount((await query.getCount(connectedWallet)).count)
+    setPost((await query.getCount(connectedWallet)).count)
     setUpdating(false)
   }
 
@@ -49,23 +50,21 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div style={{ display: 'inline' }}>
-          COUNT: {count} {updating ? '(updating . . .)' : ''}
-          <button onClick={onClickIncrement} type="button">
-            {' '}
-            +{' '}
+          Insert a message:
+          <input
+              type="text"
+              placeholder='Enter a message to share!'
+              value={post}
+              onChange={(e) => setPost(e.target.value)}
+            />
+          {/* {updating ? '(Posting . . .)' : ''} */}
+          <button onClick={onClickPost} type="button">
+            Submit
           </button>
         </div>
         {status === WalletStatus.WALLET_CONNECTED && (
           <div style={{ display: 'inline' }}>
-            <input
-              type="number"
-              onChange={(e) => setResetValue(+e.target.value)}
-              value={resetValue}
-            />
-            <button onClick={onClickReset} type="button">
-              {' '}
-              reset{' '}
-            </button>
+            Wallet Connected successfully!
           </div>
         )}
         <ConnectWallet />

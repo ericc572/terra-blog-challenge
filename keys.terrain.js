@@ -9,4 +9,8 @@ module.exports = {
   custom_tester_2: {
     privateKey: "fGl1yNoUnnNUqTUXXhxH9vJU0htlz9lWwBt3fQw+ixw=",
   },
+  bombay: { 
+    mnemonic: 
+      "divert valve just ketchup adjust vendor solve divide grass element market office cave false exhaust rug thrive photo pair manage around warrior tuition sugar"
+  }
 };

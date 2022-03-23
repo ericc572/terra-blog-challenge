@@ -3,7 +3,7 @@
   "title": "InstantiateMsg",
   "type": "object",
   "required": [
-    "count"
+    "text"
   ],
   "properties": {
     "count": {
