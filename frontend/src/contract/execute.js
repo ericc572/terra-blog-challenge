@@ -45,7 +45,7 @@ const _exec =
 
 // ==== execute contract ====
 
-export const increment = _exec({ increment: {} });
+// export const increment = _exec({ increment: {} });
 
-export const reset = async (wallet, count) =>
-  _exec({ reset: { count } })(wallet);
+export const create = async (wallet, text) =>
+  _exec({ create: { text } })(wallet);
