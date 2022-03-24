@@ -47,5 +47,5 @@ const _exec =
 
 // export const increment = _exec({ increment: {} });
 
-export const create = async (wallet, text) =>
-  _exec({ create: { text } })(wallet);
+export const create = async (wallet, title, text) =>
+  _exec({ create: { title, text } })(wallet);

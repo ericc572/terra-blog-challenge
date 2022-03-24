@@ -1,0 +1,2 @@
+529d1c110b66d44f5bcfbb10cd9a57491e0a42b9a8fbb25fe873f6d4a2de8e0c  ./target/wasm32-unknown-unknown/release/blog.wasm
+7e69f99841311d33d68a685b78000ad95a8d9af38ebc2808c60ba6c6fa1f462a  ./target/wasm32-unknown-unknown/release/counter.wasm
