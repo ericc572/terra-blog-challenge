@@ -9,9 +9,9 @@
   },
   "testnet": {
     "blog": {
-      "codeId": "56417",
+      "codeId": "56457",
       "contractAddresses": {
-        "default": "terra1js4fw6044snr2ylps9sal2gm4yde76ljkgpkv3"
+        "default": "terra1fsp489twkmsuzjv8tnxcuvqslvkxr8r2vpe44j"
       }
     }
   }

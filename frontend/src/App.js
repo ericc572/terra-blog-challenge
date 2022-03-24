@@ -54,7 +54,9 @@ function App() {
     <div className="App">
       {status === WalletStatus.WALLET_CONNECTED && (
           <div style={{ display: 'inline' }}>
-            Wallet Connected successfully: {wallets[0].terraAddress}
+            Wallet Connected successfully: {wallets[0].terraAddress} 
+            <br/>
+            Network: {network.chainID}
           </div>
         )}
         <ConnectWallet />
