@@ -13,6 +13,9 @@ It's super simple to use! All you need to do is:
 ## Demo
 https://terra-dapp.vercel.app/ 
 
+## Video Explanation
+https://drive.google.com/file/d/1gqyhiWgbwvZgriVX74v-RNXD-hGsMo_v/view?usp=sharing
+
 ## Local Setup/Tools
 
 I used:
